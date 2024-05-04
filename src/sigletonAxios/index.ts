@@ -12,8 +12,9 @@ const sigletonAxios = axios.create({
 sigletonAxios.interceptors.request.use(
   config => {
     // 在请求发送前添加 token 或其他头信息
-    if (localStorage.getItem('jwt')) {
-      config.headers.Authorization = `Bearer ${localStorage.getItem('jwt')}`
+    const token = localStorage.getItem('token')
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`
     }
 
     return config

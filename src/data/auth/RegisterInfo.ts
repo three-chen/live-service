@@ -1,5 +1,5 @@
-export default interface RegisterInfo {
-    name: string
-    password: string
-    email: string
+export interface RegisterInfo {
+  name: string
+  password: string
+  email: string
 }
