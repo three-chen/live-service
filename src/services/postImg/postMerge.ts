@@ -1,8 +1,8 @@
-import type R from '@/service/data/R'
-import type MergeInfo from '@/service/data/postImg/mergeInfo'
-import type MergeR from '@/service/data/postImg/mergeR'
-import { post } from '@/service/sigletonAxios'
+import type R from '../../data/R'
+import type MergeInfo from '../../data/postImg/mergeInfo'
+import type MergeR from '../../data/postImg/mergeR'
+import { post } from '../../sigletonAxios'
 
-export const postMergeInfo = (MergeInfo: MergeInfo): Promise<R<MergeR>> => {
-  return post('/webrtcchat/merge', MergeInfo)
+export const postMergeInfo = (MergeInfo: MergeInfo, path: string): Promise<R<MergeR>> => {
+  return post(`/uploadimg/${path}/merge`, MergeInfo)
 }

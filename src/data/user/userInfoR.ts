@@ -1,6 +1,6 @@
 import type { LoginR } from '../auth'
 
-export interface UserInfo extends Partial<LoginR> {
+export interface UserInfoR extends Partial<LoginR> {
   [key: string]: any
   briefInfo?: string
   phoneNumber?: string

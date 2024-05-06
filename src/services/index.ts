@@ -1,2 +1,5 @@
 // export * from './chat'
 export * from './auth'
+export * from './postImg'
+export * from './user'
+export * from './live'

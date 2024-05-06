@@ -55,7 +55,7 @@ export function get<T>(url: string): Promise<R<T>> {
   })
 }
 
-export function post<T>(url: string, data: any, config?: AxiosRequestConfig<any>): Promise<R<T>> {
+export function post<T>(url: string, data?: any, config?: AxiosRequestConfig<any>): Promise<R<T>> {
   return new Promise((resolve, reject) => {
     sigletonAxios
       .post(url, data, config)

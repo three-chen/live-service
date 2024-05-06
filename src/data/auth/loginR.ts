@@ -4,15 +4,15 @@ export interface LoginR {
   /**
    * 用户id
    */
-  userId: string
+  id: string
   /**
    * 用户名
    */
-  username: string
+  name: string
   /**
    * 用户邮箱
    */
-  useremail: string
+  email: string
   /**
    * jwt
    */
@@ -22,15 +22,7 @@ export interface LoginR {
    */
   auth: AuthR
   /**
-   * 用户头像 url
-   */
+   * 用户头像url
+   * */
   avatar: string
-}
-
-export interface UserInfo extends LoginR {
-  [key: string]: any
-  briefInfo: string
-  phoneNumber: string
-  birthday: string
-  roomId?: string
 }

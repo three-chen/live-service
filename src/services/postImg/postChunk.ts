@@ -1,10 +1,10 @@
-import type R from '@/service/data/R'
-import type { ChunkInfo } from '@/service/data/postImg/chunkInfo'
-import type ChunkR from '@/service/data/postImg/chunkR'
-import { post } from '@/service/sigletonAxios'
+import type R from '../../data/R'
+import type { ChunkInfo } from '../../data/postImg/chunkInfo'
+import type ChunkR from '../../data/postImg/chunkR'
+import { post } from '../../sigletonAxios'
 
-export const postChunkInfo = (ChunkInfo: ChunkInfo): Promise<R<ChunkR>> => {
-  return post('/webrtcchat/chunk', ChunkInfo, {
+export const postChunkInfo = (ChunkInfo: ChunkInfo, path: string): Promise<R<ChunkR>> => {
+  return post(`/uploadimg/${path}/chunk`, ChunkInfo, {
     headers: {
       'Content-Type': 'multipart/form-data'
     }

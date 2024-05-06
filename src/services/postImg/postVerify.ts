@@ -1,8 +1,8 @@
-import type R from '@/service/data/R'
-import type VerifyInfo from '@/service/data/postImg/verifyInfo'
-import type VerifyR from '@/service/data/postImg/verifyR'
-import { post } from '@/service/sigletonAxios'
+import type R from '../../data/R'
+import type VerifyInfo from '../../data/postImg/verifyInfo'
+import type VerifyR from '../../data/postImg/verifyR'
+import { post } from '../../sigletonAxios'
 
-export const postVerifyInfo = (VerifyInfo: VerifyInfo): Promise<R<VerifyR>> => {
-  return post('/webrtcchat/verify', VerifyInfo)
+export const postVerifyInfo = (VerifyInfo: VerifyInfo, path: string): Promise<R<VerifyR>> => {
+  return post(`/uploadimg/${path}/verify`, VerifyInfo)
 }
