@@ -51,7 +51,7 @@ async function uploadImgToServer(file: Blob, path: string, size = 1024 * 1024): 
 
 function createHash(chunks: Blob[]): Promise<string> {
   return new Promise(resolve => {
-    const worker = new Worker('/worker/worker.js')
+    const worker = new Worker('http://localhost:3000/worker/worker.js')
     worker.postMessage(chunks)
     worker.onmessage = function (e) {
       resolve(e.data)
